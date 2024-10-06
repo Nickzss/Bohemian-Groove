@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="css/2.css">
+    <title>Galería</title>
+</head>
+<body onclick="PlayAudio()">
+    <button class="toggle-button" onclick="toggleDarkMode()">Modo Oscuro</button>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="galeria.html">Galería</a>
+            <a href="historia.html">Historia</a>
+            <a href="contactanos.html">Contactanos</a>
+            <a href="ubicacion.html">Ubicación</a>
+        </nav>
+        <h1>Galería de Fotos</h1>
+    </header>
+
+    <audio id="bm" autoplay controls loop>
+        <source src="music/bm.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    
+
+    <section>
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="imagenes/2.jpg" alt="Logo de nuestra compañia">
+                </div>
+                <div class="content">
+                    <h2>Logo de nuestra compañia</h2>
+                    <p>Logotipo de nuestra compañia especializada en mantenimiento de computadoras.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="imagenes/3.jpg" alt="Servicio que da la empresa">
+                </div>
+                <div class="content">
+                    <h2>Servicios</h2>
+                    <p>Servicio que se da en la empresa.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="imagenes/1.jpg" alt="Servicio a nuestros clientes"> 
+                </div>
+                <div class="content">
+                    <h2>Calidad de servicio al cliente</h2>
+                    <p>Calidad del servicio hacia nuestros clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function PlayAudio() {
+            document.getElementById("bm").play();
+        }
+
+        document.getElementById("bm").addEventListener("ended", function() {
+            var bm = document.getElementById("bm");
+            bm.play();
+        });
+
+        
+    </script>
+    
+    <footer>
+         <p>© Bohemian Groove Corp</p>
+    </footer>
+</body>
+</html>
